@@ -54,3 +54,4 @@ src.md/              # Ignore src.md directory for markdown files
 # Ignore build artifacts (optional)
 dist/                # Ignore distribution folder (if applicable)
 build/               # Ignore build folder (if applicable)
+.next/
