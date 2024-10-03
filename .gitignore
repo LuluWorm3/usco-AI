@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -9,29 +7,37 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-#/out/
+# Next.js
+/.next/  # Correct, this will ignore the entire Next.js build output
+/out/    # If you are using static export, this folder might be generated
+/build   # This is also sometimes generated in production builds
 
-# production
-/build
+# environment variables
+.env     # Ignores the environment variable file
+.env*.local  # Ignores environment-specific .env files
+.env.*     # If you have multiple .env files like .env.production, .env.staging, etc.
 
-#.env
+/.vercel  # Correct, this will ignore local Vercel deployment config
+.DS_Store # macOS specific, safe to keep
+
+# TypeScript
+*.tsbuildinfo  # TypeScript incremental compilation file
+next-env.d.ts  # Next.js auto-generated TypeScript declaration
+
 # misc
-.DS_Store
-*.pem
-
-# debug
+*.pem       # If you’re using any SSL certificates in development
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# Ignore Logs
+*.log
 
-# vercel
-.vercel
+# Ignore IDE config files (optional)
+.vscode/
+.idea/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Ignore lock files (optional)
+package-lock.json
+yarn.lock
+src.md/

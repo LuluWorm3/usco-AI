@@ -44,3 +44,13 @@ If your branch is named `master`, replace `main` with `master`.
 Go to your repository on GitHub, and you should see all your files uploaded.
 
 Let me know if you face any issues during the process!
+
+
+# Remove the .next directory from Git
+git rm -r --cached .next
+
+# Commit the changes
+git commit -m "Remove .next folder from the Git history"
+
+# Push to GitHub
+git push origin main
