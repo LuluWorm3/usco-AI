@@ -1,43 +1,56 @@
-# dependencies
+# Dependencies
 /node_modules
 /.pnp
 .pnp.js
 .yarn/install-state.gz
 
-# testing
+# Testing
 /coverage
 
 # Next.js
-/.next/  # Correct, this will ignore the entire Next.js build output
-/out/    # If you are using static export, this folder might be generated
-/build   # This is also sometimes generated in production builds
+/.next/               # Ignore Next.js build output
+/out/                 # Ignore static export output
+/build                # Ignore production build outputs
 
-# environment variables
-.env     # Ignores the environment variable file
-.env*.local  # Ignores environment-specific .env files
-.env.*     # If you have multiple .env files like .env.production, .env.staging, etc.
+# Environment Variables
+.env                  # Ignore main environment variable file
+.env*.local           # Ignore environment-specific .env files
+.env.*                # Ignore multiple .env files for different environments
 
-/.vercel  # Correct, this will ignore local Vercel deployment config
-.DS_Store # macOS specific, safe to keep
+# Vercel
+/.vercel              # Ignore local Vercel deployment config
+
+# macOS Specific
+.DS_Store             # macOS-specific metadata files
 
 # TypeScript
-*.tsbuildinfo  # TypeScript incremental compilation file
-next-env.d.ts  # Next.js auto-generated TypeScript declaration
+*.tsbuildinfo         # TypeScript incremental compilation files
+next-env.d.ts         # Next.js auto-generated TypeScript declaration files
 
-# misc
-*.pem       # If you’re using any SSL certificates in development
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Misc
+*.pem                 # Ignore SSL certificate files
+npm-debug.log*        # Ignore npm debug log files
+yarn-debug.log*       # Ignore Yarn debug log files
+yarn-error.log*       # Ignore Yarn error log files
 
 # Ignore Logs
-*.log
+*.log                 # Ignore all log files
 
 # Ignore IDE config files (optional)
-.vscode/
-.idea/
+.vscode/              # Ignore VSCode config directory
+.idea/                # Ignore JetBrains IDE config directory
 
 # Ignore lock files (optional)
-package-lock.json
-yarn.lock
-src.md/
+package-lock.json     # Ignore npm lock file (keep if using npm)
+yarn.lock             # Ignore Yarn lock file (keep if using Yarn)
+
+# Ignore specific large files
+/.next/cache/webpack/server-production/*.pack  # Ignore all .pack files in the specified folder
+/.next/cache/webpack/client-production/*.pack   # Ignore all .pack files in the specified folder
+
+# Ignore generated directories
+src.md/              # Ignore src.md directory for markdown files
+
+# Ignore build artifacts (optional)
+dist/                # Ignore distribution folder (if applicable)
+build/               # Ignore build folder (if applicable)
